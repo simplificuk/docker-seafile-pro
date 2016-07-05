@@ -3,7 +3,6 @@ if [ ! -f "${SEAFILE_INSTALL_DIR}/._initialsetup" ]
 then
   echo Performing inital setup...
   cd ${SEAFILE_INSTALL_DIR}
-  ./setup-seafile.sh auto
   ./setup-seafile${SETUP_TYPE}.sh auto -n "${SERVER_NAME:-`hostname -s`}" \
 	-i "${SERVER_IP:-`hostname -i`}" \
 	-p "${FILESERVER_PORT:-8082}" \
